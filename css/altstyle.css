@@ -1,0 +1,178 @@
+body{
+    height: 100%;
+    margin: 0px;
+}
+#main {
+    background-image: linear-gradient(to bottom right, rgb(88, 12, 12), rgb(3, 50, 104));
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.maxwidth {
+    width: 1440px;
+    margin: auto;
+    position: relative;
+}
+#sound {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 110px;
+    left: 57px;
+    font: bold 15px/8px Arial, Sans Serif;
+    color: white;
+    background-color: inherit;
+    border: none;
+}
+#togglestyle {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 50px 30px;
+    height: 40px;
+    width: 80px;
+    background-image: url(../images/target.png);
+    background-size: 100% 100%;
+    background-color: inherit;
+    color: rgb(39, 90, 39);
+    font: bold 9px/8px Arial, Sans Serif;
+    border: none;
+}
+#togglestyle:hover{
+    color: white;
+}
+#start {
+    width: 100px;
+    height: 100px;
+    margin: 15px auto;
+    border: none;
+    background: url(../images/scope.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: rgba(66, 91, 136, 0.692);
+    border-radius: 50%;
+    color: rgb(19, 39, 105);
+    font: bold 20px/20px Arial, Sans Serif;
+}
+#start:hover {
+    color: rgb(123, 173, 219);
+}
+#logo {
+    width: 90px;
+    height: 100px;
+    background-image: url(../images/altlogo.png);
+    background-size: 100% 100%;
+    margin: 15px;
+    margin-right: 60px;
+    float: right;
+}
+#board {
+    background: url(../images/altboard.jpg);
+    border-radius: 10px;
+    margin: 13px 5px 10px 5px;
+    height: 600px;
+    Width: 1200px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 5px solid rgb(15, 26, 49);
+    box-sizing: border-box;
+    float: left;
+}
+#board:hover{
+    cursor:url(../images/altcursor.png), auto;
+}
+#target {
+    height: 90px;
+    width: 45px;
+    background-image: url(../images/alttarget.png);
+    background-size: 45px 90px;
+    border-radius: 6px;
+    position: relative;
+    top: 300px;
+    left: 590px;
+    animation: myrotation linear infinite;
+}
+#target:hover{
+    background-color: rgba(23, 64, 124, 0.808);
+}
+@keyframes myrotation {
+    0% {-webkit-transform: rotate(-90deg);}
+    50% {-webkit-transform: rotate(90deg);}
+    100% {-webkit-transform: rotate(-90deg);}
+}
+#sideBar {
+    margin: 13px 5px 10px 5px;
+    height: 600px;
+    Width: 200px;
+    background-color: rgb(15, 26, 49);
+    border-radius: 10px;
+    float: right;
+}
+h5 {
+    margin: 0px;
+    padding: 7px 0px;
+    font: bold 15px/20px Arial, Sans Serif;
+    color: rgb(136, 6, 6);
+}
+.info {
+    margin: 8px 10px;
+    padding: 10px;
+    border: 2px solid rgb(11, 100, 151);
+    border-radius: 8px;
+    height: 60px;
+    Width: 160px;
+    color: rgb(136, 6, 6);
+    font: 30px/20px Arial, Sans Serif;
+}
+#playerlist {
+    padding-right: 2px;
+    height: 95px;
+    width: 168px;
+    font: 15px/20px Arial, Sans Serif;
+}
+#high5 {
+    padding-top: 0px;
+    padding-bottom: 2px;
+}
+#highScores {
+    padding-top: 5px;
+    text-align: left;
+    height: 77px;
+    overflow-y: scroll;
+}
+#highScores::-webkit-scrollbar {
+    width: 8px;
+}
+#highScores::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(221, 138, 106); 
+    border-radius: 10px;
+}
+#highScores::-webkit-scrollbar-thumb {
+    background: rgba(160, 21, 12, 0.603);
+    border-radius: 10px;
+}
+#highScores::-webkit-scrollbar-thumb:hover {
+    background: rgb(139, 19, 19);
+}
+.player {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted rgb(216, 147, 127);
+}
+.dates {
+    visibility: hidden;
+    background-color: rgba(204, 52, 52, 0.877);
+    color: rgb(20, 33, 53);
+    padding: 0px 3px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+}
+.player:hover .dates {
+    visibility: visible;
+}
