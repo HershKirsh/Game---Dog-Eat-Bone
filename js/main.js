@@ -8,10 +8,17 @@ const htmlElements = {
     level: document.getElementById("level"),
     miss: document.getElementById("miss"),
     timer: document.getElementById("timer"),
-    highScores: document.getElementById("highScores")
+    highScores: document.getElementById("highScores"),
+    bark: document.getElementById("bark"),
+    grass: document.getElementById("grass"),
+    shot: document.getElementById("shot"),
+    hit: document.getElementById("hit"),
+    styleSheet: document.getElementById("style"),
+    toggleButton: document.getElementById("togglestyle"),
+    button: document.getElementById("sound")
 };
 //This object tracks the values of each element in the side bar
-var scoreElements = {
+const scoreElements = {
     score: 0,
     clicksToNext: 10,
     level: 1,
@@ -70,21 +77,19 @@ const gameFuncs = {
     misSound: function () {
         if (soundElems.sound) {
             if (styleElements.currenStyle == "dog") {
-                var misSound = new Audio("./sounds/grass.mp3");
+                htmlElements.grass.play();
             } else {
-                var misSound = new Audio("./sounds/shot.mp3");
-            }
-            misSound.play();
+                htmlElements.shot.play();
+            };
         }
     },
     hitSound: function () {
         if (soundElems.sound) {
             if (styleElements.currenStyle == "dog") {
-                var hitSound = new Audio("./sounds/bark.mp3");
+                htmlElements.bark.play();
             } else {
-                var hitSound = new Audio("./sounds/hit.mp3");
+                htmlElements.hit.play();
             }
-            hitSound.play();
         }
     }
 };
@@ -170,31 +175,28 @@ function reset() {
 };
 //This function toggles between the 2 versions of the game
 const styleElements = {
-    styleSheet: document.getElementById("style"),
-    toggleButton: document.getElementById("togglestyle"),
     currenStyle: "dog",
     toggleStyle: function () {
         if (styleElements.currenStyle == "dog") {
             styleElements.currenStyle = "shoot";
-            styleElements.styleSheet.setAttribute("href", "css/altstyle.css");
-            styleElements.toggleButton.innerHTML = "Switch to<br>Dog Eat Bone";
+            htmlElements.styleSheet.setAttribute("href", "css/altstyle.css");
+            htmlElements.toggleButton.innerHTML = "Switch to<br>Dog Eat Bone";
         } else {
             styleElements.currenStyle = "dog";
-            styleElements.styleSheet.setAttribute("href", "css/style.css");
-            styleElements.toggleButton.innerHTML = "Switch to<br>Sharp Shooter"
+            htmlElements.styleSheet.setAttribute("href", "css/style.css");
+            htmlElements.toggleButton.innerHTML = "Switch to<br>Sharp Shooter"
         };
     }
 };
 const soundElems = {
-    button: document.getElementById("sound"),
     sound: true,
     soundOnOff: function () {
         if (this.sound) {
             this.sound = false;
-            this.button.innerHTML = `<i class="fas fa-volume-mute"></i>`;
+            htmlElements.button.innerHTML = `<i class="fas fa-volume-mute"></i>`;
         } else {
             this.sound = true;
-            this.button.innerHTML = `<i class="fas fa-volume-up"></i>`;
+            htmlElements.button.innerHTML = `<i class="fas fa-volume-up"></i>`;
         }
     }
 };

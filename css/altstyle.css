@@ -16,16 +16,24 @@ body{
     margin: auto;
     position: relative;
 }
+button:focus {
+    outline: none;
+}
 #sound {
     height: 25px;
     width: 25px;
     position: absolute;
-    top: 110px;
+    top: 108px;
     left: 57px;
     font: bold 15px/8px Arial, Sans Serif;
-    color: white;
+    color: rgb(53, 84, 168);
+    -webkit-text-stroke: white .5px;
     background-color: inherit;
     border: none;
+}
+#sound:hover {
+    color: white;
+    -webkit-text-stroke-width: 0;
 }
 #togglestyle {
     display: inline-block;

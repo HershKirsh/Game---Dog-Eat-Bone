@@ -15,7 +15,19 @@
 <body>
   <div id="main">
     <div class="maxwidth">
-      <button id="togglestyle" onclick="styleElements.toggleStyle()">Switch to<br>Dog Eat Bone</button>
+      <audio id="bark">
+        <source src="./sounds/bark.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="grass">
+        <source src="./sounds/grass.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="hit">
+        <source src="./sounds/hit.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="shot">
+        <source src="./sounds/shot.mp3" type="audio/mpeg">
+      </audio>
+      <button id="togglestyle" onclick="styleElements.toggleStyle()">Switch to<br>Sharp Shooter</button>
       <button id="sound" onclick="soundElems.soundOnOff()"><i class="fas fa-volume-up"></i></button>
       <div id="logo"></div>
       <div>
